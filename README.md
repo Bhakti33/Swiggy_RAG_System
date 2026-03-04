@@ -1,5 +1,15 @@
-# Swiggy_RAG_System-
+# Swiggy_RAG_System
+## RAG Based Question Answering System
 A CLI-based Retrieval-Augmented Generation (RAG) system that enables semantic question answering over the Swiggy Annual Report. The pipeline performs PDF ingestion, text chunking, vector indexing, and context-aware response generation using Python, ChromaDB, and embedding-based retrieval, with optional LLM integration for answer synthesis.
+
+## Data Source
+
+- **Document:** Swiggy Annual Report (Latest Available)
+- **Format:** PDF
+- **Source:** Publicly available
+- **Link:** https://www.swiggy.com/media/annual-report
+
+The document is used exclusively for retrieval and answer generation.
 
 ## Project Objective
 The objective of this project is to design and implement an AI system that:
@@ -8,7 +18,16 @@ The objective of this project is to design and implement an AI system that:
 - Prevents hallucination by grounding responses in retrieved context
 - Demonstrates a real-world RAG architecture used in industry
 
----
+##  Features
+
+- PDF ingestion and text extraction
+-  Intelligent token-based chunking
+-  Semantic search using vector embeddings
+-  ChromaDB vector store (Mac-friendly, no FAISS issues)
+-  Context-aware answer generation
+-  Offline embedding support (Sentence Transformers)
+-  CLI chat interface
+-  Hallucination-safe responses (answers only from report)
 
 ## Project Structure
 swiggy-rag/
@@ -24,7 +43,6 @@ swiggy-rag/
 ├── requirements.txt
 └── README.md
 
---- 
 
 ## How to Run
 
@@ -49,7 +67,7 @@ Choose an option
 2 → Chat with bot
 
 ```
----
+
 
 # Note on OpenAI API Usage:
 This project uses OpenAI embeddings and LLMs for document ingestion and question answering.
